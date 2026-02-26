@@ -1,0 +1,54 @@
+{
+    "name": "tecnozt/proteczt-client",
+    "description": "Laravel client package for Proteczt License Management System - verify and control application licenses remotely.",
+    "keywords": ["laravel", "license", "protection", "saas", "tecnozt", "proteczt"],
+    "homepage": "https://github.com/tecnozt/proteczt-client",
+    "license": "proprietary",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Tecnozt",
+            "email": "dev@tecnozt.com",
+            "homepage": "https://tecnozt.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/contracts": "^11.0|^12.0",
+        "illuminate/support": "^11.0|^12.0",
+        "illuminate/http": "^11.0|^12.0",
+        "illuminate/cache": "^11.0|^12.0",
+        "illuminate/console": "^11.0|^12.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tecnozt\\Proteczt\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tecnozt\\Proteczt\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tecnozt\\Proteczt\\ProtecztServiceProvider"
+            ],
+            "aliases": {
+                "Proteczt": "Tecnozt\\Proteczt\\Facades\\Proteczt"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
