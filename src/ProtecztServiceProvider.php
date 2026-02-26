@@ -30,7 +30,7 @@ class ProtecztServiceProvider extends ServiceProvider
         });
 
         // Register alias for facade
-        $this->app->alias(ProtecztLicenseService::class, 'proteczt');
+        $this->app->alias(ProtecztLicenseService::class, 'proteczt.license');
     }
 
     /**
