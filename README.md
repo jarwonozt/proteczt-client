@@ -47,7 +47,7 @@ PROTECZT_DOMAIN=your-app-domain.com   # Optional — auto-detected if omitted
 # Optional tuning
 PROTECZT_AUTO_REGISTER=true
 PROTECZT_SKIP_LOCAL=true
-PROTECZT_CACHE_DURATION=3600
+PROTECZT_CACHE_DURATION=0        # 0 = real-time (check every request), 60-300 = reduce API load
 PROTECZT_TIMEOUT=10
 PROTECZT_VERIFY_SSL=true
 ```
@@ -185,7 +185,7 @@ This copies the view to `resources/views/vendor/proteczt/errors/license-expired.
 | `domain` | `PROTECZT_DOMAIN` | `null` (auto) | Override domain detection |
 | `auto_register` | `PROTECZT_AUTO_REGISTER` | `true` | Auto-register on first request |
 | `skip_local` | `PROTECZT_SKIP_LOCAL` | `true` | Skip check in `local`/`testing` env |
-| `cache_duration` | `PROTECZT_CACHE_DURATION` | `3600` | Cache TTL in seconds |
+| `cache_duration` | `PROTECZT_CACHE_DURATION` | `0` | Cache TTL in seconds (0 = no cache, real-time enforcement) |
 | `timeout` | `PROTECZT_TIMEOUT` | `10` | HTTP request timeout in seconds |
 | `verify_ssl` | `PROTECZT_VERIFY_SSL` | `true` | Verify SSL certificates |
 

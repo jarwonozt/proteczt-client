@@ -70,12 +70,16 @@ return [
     |--------------------------------------------------------------------------
     |
     | How long the license status should be cached to reduce API calls.
-    | Default: 3600 (1 hour).
-    | Set to 0 to disable caching (not recommended for production).
+    | Default: 0 (no caching - real-time status check every request).
+    | 
+    | Set to 0 for immediate license enforcement - when you disable a client
+    | on the server, it will be blocked on the very next request.
+    |
+    | For high-traffic apps, consider setting to 60-300 to reduce API load.
     |
     */
 
-    'cache_duration' => env('PROTECZT_CACHE_DURATION', 3600),
+    'cache_duration' => env('PROTECZT_CACHE_DURATION', 0),
 
     /*
     |--------------------------------------------------------------------------
