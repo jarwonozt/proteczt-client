@@ -6,7 +6,7 @@
 
 Laravel client package for [Proteczt](https://github.com/tecnozt/proteczt) — a remote license management system. Install this package in your distributed Laravel applications to control access from a central Proteczt server.
 
----
+----
 
 ## Requirements
 
